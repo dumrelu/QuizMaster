@@ -55,4 +55,20 @@ public abstract class Component<T> {
 	public T get(int index) {
 		return components.get(index);
 	}
+	
+	/**
+	 * Creates an iterator for the current component
+	 * @return An iterator for the current component
+	 */
+	public ComponentIterator<T> iterator() {
+		return new ComponentIterator<T>(this);
+	}
+	
+	/**
+	 * Returns the number of children components
+	 * @return Size of components
+	 */
+	public int size() {
+		return components.size();
+	}
 }
