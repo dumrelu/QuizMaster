@@ -38,6 +38,10 @@ public abstract class Component<T> {
 		components.add(component);
 	}
 	
+	public void add(List<T> components) {
+		this.components.addAll(components);
+	}
+	
 	/**
 	 * Removes a component from the components list
 	 * @param component The component

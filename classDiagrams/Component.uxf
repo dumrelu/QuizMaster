@@ -45,7 +45,7 @@
       <x>330</x>
       <y>190</y>
       <w>280</w>
-      <h>230</h>
+      <h>250</h>
     </coordinates>
     <panel_attributes>Question
 *extends Component&lt;Answer&gt;*
@@ -61,7 +61,8 @@
 +unanswer(answer)
 +getPickedAnswers()
 +isAnswered()
-+reset()</panel_attributes>
++reset()
++toString()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -81,7 +82,7 @@ pickedAnswers = new HashSet</panel_attributes>
     <type>com.umlet.element.Note</type>
     <coordinates>
       <x>310</x>
-      <y>430</y>
+      <y>450</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
