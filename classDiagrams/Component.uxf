@@ -7,7 +7,7 @@
       <x>250</x>
       <y>20</y>
       <w>210</w>
-      <h>140</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>/*Component&lt;T&gt;*/
 --
@@ -17,7 +17,26 @@
 +Component(text)
 +Component(text, components)
 +add(component: S)
-+remove(component: S)</panel_attributes>
++remove(component: S)
++iterator()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>210</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Answer 
+*extends Component&lt;String&gt;*
+--
+-correct: boolean
+--
++Answer(answer)
++isCorrect()
++toString()</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

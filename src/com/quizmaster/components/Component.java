@@ -71,4 +71,8 @@ public abstract class Component<T> {
 	public int size() {
 		return components.size();
 	}
+	
+	public String toString() {
+		return text;
+	}
 }
