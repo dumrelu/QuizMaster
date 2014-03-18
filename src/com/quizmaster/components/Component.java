@@ -68,6 +68,10 @@ public abstract class Component<T> {
 		return new ComponentIterator<T>(this);
 	}
 	
+	protected List<T> getComponents() {
+		return components;
+	}
+	
 	/**
 	 * Returns the number of children components
 	 * @return Size of components
@@ -79,4 +83,7 @@ public abstract class Component<T> {
 	public String toString() {
 		return text;
 	}
+	
+	public String getText() { return text; }
+	public void setText(String text) { this.text = text; }
 }
