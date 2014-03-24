@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.quizmaster.components.Answer;
+import com.quizmaster.components.ComponentIterator;
 import com.quizmaster.components.Question;
 
 public class QuestionTest {
@@ -67,5 +68,16 @@ public class QuestionTest {
 		
 		assertTrue("isAnswered: ", question.isAnswered());
 		assertTrue("isCorrect: ", question.isCorrect());
+	}
+	
+	@Test
+	public void iterator() {
+		ComponentIterator<Answer> iterator = question.iterator();
+		int i;
+		
+		for(i = 0; iterator.hasNext(); i++)
+			iterator.next();
+		
+		assertTrue("iterator", i == 4);
 	}
 }
