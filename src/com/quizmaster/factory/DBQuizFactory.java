@@ -1,5 +1,7 @@
 package com.quizmaster.factory;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,18 +14,20 @@ import com.quizmaster.components.Answer;
 import com.quizmaster.components.Question;
 import com.quizmaster.components.Quiz;
 
-public class DBQuizFactory implements QuizFactory {
+public class DBQuizFactory extends UnicastRemoteObject implements QuizFactory {
 	private static final long serialVersionUID = 1L;
 	
 	private Connection connection;
 	
 	public DBQuizFactory(String username, String password) throws Exception {
+		super();
+		
 		Class.forName("com.mysql.jdbc.Driver");
 		
 		connection = DriverManager.getConnection("jdbc:mysql://localhost/QuizMaster", username, password);
 	}
 	
-	public Quiz createQuiz(String quizName) {
+	public Quiz createQuiz(String quizName) throws RemoteException {
 		try {
 			//Prepare query
 			String query = "SELECT * FROM Quizzes WHERE quizName=?";
