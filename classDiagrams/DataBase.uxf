@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>290</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Answers*
+--
+#id INT NOT NULL AUTO INCREMENT
+*answer VARCHAR(60) NOT NULL
+oexplanation</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>130</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>CorrectAnswers
+--
+@question_id
+@answer_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>210</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>WrongAnswers
+--
+@question_id
+@answer_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>30</y>
+      <w>290</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*Questions*
+--
+#id INT NOT NULL AUTO INCREMENT
+*question VARCHAR(60) NOT NULL
+*answers INT NOT NULL
+*correct_answers INT NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>140</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>QuestionList
+--
+@quiz_id
+@question_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>220</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Quizzes*
+--
+#name VARCHAR(20) NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

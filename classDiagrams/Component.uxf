@@ -139,11 +139,30 @@ return pickedA &lt;= correct</panel_attributes>
       <x>620</x>
       <y>440</y>
       <w>260</w>
-      <h>60</h>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>/*QuizFactory*/
+    <panel_attributes>/*interface QuizFactory*/
 --
-TODO: createQuizz(quizName)</panel_attributes>
++createQuizz(quizName)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>620</x>
+      <y>500</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/*DBQuizFactory*/
+--
++createQuizz(quizName)
+-createQuestion(id)
+-createAnswer(id)
+
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
