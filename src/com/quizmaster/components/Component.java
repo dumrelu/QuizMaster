@@ -1,9 +1,12 @@
 package com.quizmaster.components;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Component<T> {
+public abstract class Component<T> implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	//The text stored by the component
 	private String text;
 	

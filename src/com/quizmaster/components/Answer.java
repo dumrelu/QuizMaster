@@ -1,6 +1,8 @@
 package com.quizmaster.components;
 
 public class Answer extends Component<String> {
+	private static final long serialVersionUID = 1L;
+	
 	//Indicates if the answer is correct or not
 	private boolean correct;
 	

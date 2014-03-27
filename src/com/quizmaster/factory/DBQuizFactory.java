@@ -13,6 +13,7 @@ import com.quizmaster.components.Question;
 import com.quizmaster.components.Quiz;
 
 public class DBQuizFactory implements QuizFactory {
+	private static final long serialVersionUID = 1L;
 	
 	private Connection connection;
 	

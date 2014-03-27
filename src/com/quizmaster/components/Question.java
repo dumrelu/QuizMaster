@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 public class Question extends Component<Answer> {
+	private static final long serialVersionUID = 1L;
+	
 	//The answers that are going to be displayed
 	private List<Answer> displayedAnswers;
 	

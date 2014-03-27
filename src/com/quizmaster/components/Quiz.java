@@ -3,6 +3,7 @@ package com.quizmaster.components;
 import java.util.List;
 
 public class Quiz extends Component<Question> {
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructs a quiz object with the given name and given questions

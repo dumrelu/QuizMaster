@@ -1,6 +1,9 @@
 package com.quizmaster.components;
 
-public class ScoreStrategy {
+import java.io.Serializable;
+
+public class ScoreStrategy implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Calculates the score for the given quiz.

@@ -1,6 +1,10 @@
 package com.quizmaster.components;
 
-public class ComponentIterator<T> {
+import java.io.Serializable;
+
+public class ComponentIterator<T> implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	//The component that is going to be iterated
 	private Component<T> component;
 	

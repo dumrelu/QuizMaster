@@ -1,5 +1,6 @@
 package com.quizmaster.runner;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,7 +10,8 @@ import com.quizmaster.components.Question;
 import com.quizmaster.components.Quiz;
 import com.quizmaster.components.ScoreStrategy;
 
-public class QuizRunner {
+public class QuizRunner implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Runs a given quiz. 
