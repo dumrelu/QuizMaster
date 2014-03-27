@@ -142,7 +142,7 @@ public class Question extends Component<Answer> {
 	}
 	
 	public String toString() {
-		String result = getText() + "\n";
+		String result = getText() + "(" + correctAnswers + " answers)" + "\n";
 		char index = 'a';
 		
 		for(Answer answer : displayedAnswers)
