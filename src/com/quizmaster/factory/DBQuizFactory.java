@@ -49,6 +49,31 @@ public class DBQuizFactory extends UnicastRemoteObject implements QuizFactory {
 		}
 	}
 	
+	public String[] getAvailableQuizzes() throws RemoteException {
+		ArrayList<String> result = new ArrayList<String>();
+		
+		try {
+			//Prepare query
+			String query = "SELECT quizName FROM Quizzes";
+			PreparedStatement ps = connection.prepareStatement(query);
+			
+			//Execute query
+			ResultSet rs = ps.executeQuery();
+			
+			//Construct the result
+			while(rs.next()) {
+				result.add(rs.getString("quizName"));
+			}
+		} catch(SQLException e) {
+			//Nothing
+		}
+		String[] r = new String[result.size()];
+		
+		result.toArray(r);
+		
+		return r;
+	}
+	
 	private List<Question> createQuestionList(String quizName) throws SQLException {
 		//Prepare query
 		String query = "SELECT question_id FROM QuestionList WHERE quiz_id=?";

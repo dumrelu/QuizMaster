@@ -28,6 +28,13 @@ public class DBQuizFactoryTest {
 		for(Question question : questions) 
 			System.out.println(question);*/
 		
+		//Print all the available quizzes
+		String[] quizzes = factory.getAvailableQuizzes();
+		System.out.print("Available quizzes: ");
+		for(String q : quizzes) 
+			System.out.print(q + " ");
+		System.out.println();
+		
 		Quiz quiz = factory.createQuiz("Test1");
 		QuizRunner quizRunner = new QuizRunner();
 		ScoreStrategy strategy = new ScoreStrategy();

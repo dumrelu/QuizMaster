@@ -9,5 +9,6 @@ import com.quizmaster.components.Quiz;
 public interface QuizFactory extends Serializable, Remote {
 
 	public Quiz createQuiz(String quizName) throws RemoteException;
+	public String[] getAvailableQuizzes() throws RemoteException;
 	
 }
